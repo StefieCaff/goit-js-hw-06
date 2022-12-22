@@ -12,3 +12,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imagesList =  document.getElementsByClassName("gallery");
+
+const catsListItem
