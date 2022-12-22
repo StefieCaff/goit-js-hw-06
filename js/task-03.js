@@ -1,3 +1,5 @@
+const galleryList =  document.querySelector(".gallery");
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -13,6 +15,11 @@ const images = [
   },
 ];
 
-const imagesList =  document.getElementsByClassName("gallery");
+const {url, alt} = images
 
-const catsListItem
+const imgMarkup =
+  images.map((img) =>
+    `<li class="gallery__item">
+   <img class="gallery__img" src="${img.url}" alt="${img.alt}" width="400px" height="300px"</img></li>`).join("");
+
+galleryList.insertAdjacentHTML("beforeend", imgMarkup);
