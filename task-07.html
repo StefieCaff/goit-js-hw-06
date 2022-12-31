@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 7</title>
     <link rel="stylesheet" href="css/common.css" />
+    <style>
+      .task07__label {
+        padding: 10px;
+        display: inline-flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
-
-    <input id="font-size-control" type="range" min="16" max="96" />
+    <label class="task07__label" for="font-size-control">Font Size (from 16 to 96):
+      <input id="font-size-control" type="range" min="16" max="96" />
+    </label>
     <br />
     <span id="text">Abracadabra!</span>
 

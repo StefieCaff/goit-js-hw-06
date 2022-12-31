@@ -26,20 +26,3 @@ button {
 ul {
   list-style: none;
 }
-
-.gallery {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
-}
-
-.gallery__item {
-  padding: 10px;
-}
-
-.gallery__img {
-  border: 2px solid;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
