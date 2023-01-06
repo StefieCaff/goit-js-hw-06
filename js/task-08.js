@@ -1,27 +1,27 @@
-class User {
-
-    constructor(selector) {
-
-    }
-}
+const loginForm = document.querySelector("form.login-form");
 
 
 
-
-const loginForm = document.querySelector(".login-form");
-
-const email = loginForm.firstElementChild.value;
-// const password = loginForm.password.value;
-console.log(email);
-// console.log(password);
-console.log(loginForm);
-
-loginForm.addEventListener("submit", (event) => {
+function submitLoginForm(event) {
     event.preventDefault();
-    if (email.value || password.value == " ") {
-        alert('The fields must be filled in. Thanks!');
+
+    const loginElements = event.currentTarget.elements;
+    const email = loginElements.email.value;
+    const password = loginElements.password.value;
+
+    if (email == "" || password == "") {
+        alert("The fields must be filled in. Thanks!");
+        loginForm.reset();
         return false;
     }
-});
 
+    const loginFormData = {
+        email,
+        password,
+    }
+    
+    console.log(loginFormData);
+    loginForm.reset();
+};
 
+loginForm.addEventListener("submit", submitLoginForm);
