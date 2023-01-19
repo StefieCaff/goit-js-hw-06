@@ -2,6 +2,7 @@
 const changeColorBtn = document.querySelector(".change-color");
 const changedElem = document.querySelector("body");
 const randomHexColor = document.querySelector(".color");
+const randomHexColorDark = document.querySelector(".color-dark");
 
 // random color arrow function
 // const getRandomHexColor = () => {
@@ -16,4 +17,5 @@ changeColorBtn.addEventListener('click', function () {
   const randomColor = getRandomHexColor();
   changedElem.style.backgroundColor = randomColor;
   randomHexColor.textContent = `${randomColor}`;
+  randomHexColorDark.textContent = `${randomColor}`;
 });
