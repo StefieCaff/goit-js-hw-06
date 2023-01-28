@@ -1,7 +1,5 @@
 const loginForm = document.querySelector("form.login-form");
 
-
-
 function submitLoginForm(event) {
     event.preventDefault();
 
